@@ -28,7 +28,9 @@ def reward_function(params):
     elif distance_from_center <= marker_3:
         reward += 0.1
     elif distance_from_center <= marker_4:
-        reward += -0.5
+        reward += -2
     else:
         reward = 1e-3  # likely crashed/ close to off track
+
+    # Could make it get more reward on completion
     return float(reward)
